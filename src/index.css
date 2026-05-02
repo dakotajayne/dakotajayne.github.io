@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --pink-light:  #FFF1F6;   /* borders, subtle fills */
+        --pink-mid:    #FEE0E9;   /* buttons, active bg */
+        --pink-deep:   #F5C9D4;   /* hover emphasis */
+        --bg-pink: #fff7f8;
+
+        --green-soft:   #dfeedd;  /* badge backgrounds */
+        --green-accent: #b8d3b2;  /* accent text — logo, highlighted words */
+        --bg-green: #f4faf2; 
+
+        --surface:     #FDF8F9;   /* pure white page bg */
+        --hover-fill:  #dadada;   /* very light grey hover */
+
+        --grey-light:  #F4F4F4;   /* card bg, input bg */
+        --grey-mid:    #E0E0E0;   /* borders, dividers */
+        --grey-dark:   #8b8989;   /* secondary text */
+
+        --text-primary:   #3F3A40;  /* near black */
+        --text-secondary: #7A7A7A;  /* medium grey */
+        --text-muted:     #C0C0C0;  /* light grey */
+
+
+    }
+}
+
+@layer components {
+    /* uppercase */
+    .nav-link {
+        @apply text-[15px] font-snpro tracking-[0.5px] text-[var-(--text-primary)]
+        no-underline transition-all duration-200 pb-1;
+    }
+    .nav-link-active {
+        @apply text-[var(--pink-deep)] font-bold
+    }
+    .nav-link-inactive {
+        @apply text-[var(--text-primary)] hover:text-[var(--pink-deep)]
+    }
+    .hover-link {
+        @apply no-underline transition-colors duration-200 hover:text-[var(--pink-deep)]
+    }
+}
